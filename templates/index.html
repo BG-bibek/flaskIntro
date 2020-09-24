@@ -1,0 +1,38 @@
+{%extends 'base.html'%}
+
+{%block head%}
+
+{% endblock%}
+
+
+
+{%block body%}
+
+<div class="container"><h1 >Welcome to Network and data security group project </h1>
+    <p>In this site you can encode your sms using mono alphabetic cryptographic, Note:: <em>space will be changed into ~. </em> </p>
+</div> 
+
+<div class="container">
+    <h2>For Encryption use the below form !!</h2>
+<form action="/encryptResult" method="POST" enctype="multipart/form-data">
+    <textarea name="plainText" cols="50" rows="5" placeholder="Write here !!"></textarea>
+    <br>
+    <input  type="file" name="file" />
+   
+    <input class="btn btn-sm btn-danger mb-2" value="encrypt" type="submit" >
+</form>
+
+
+<hr>
+<h2>For Decryption use the below form !!</h2>
+
+<form action="/decryptResult" method="POST" enctype="multipart/form-data">
+    <textarea name="cipher" cols="50" rows="5" placeholder="Write here !!"></textarea>
+    <br>
+    <input type="file" name="file" />
+ 
+    <input class="btn btn-sm btn-warning " value="decrypt" type="submit" />
+</form>
+</div>
+
+{% endblock%}

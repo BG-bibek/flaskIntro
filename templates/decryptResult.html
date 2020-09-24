@@ -1,0 +1,33 @@
+{%extends 'base.html'%} 
+
+{%block head%}
+
+{% endblock%} 
+
+
+{%block body%}
+<div class="container">
+  {%if plainText != "":%}
+  <h1>Result </h1>
+  <p>The Decrpytion of the text is given below :</p>
+  {% endif %}
+  <hr>
+{{plainText}}
+<br>
+<br>
+<hr>
+
+<h1>Result</h1>
+
+{% for file in files %}
+<hr>
+  
+<a class="btn btn-lg btn-success" href="/getPlot/{{file}}" >Click here to download {{file}}.</a>
+
+{% endfor %}
+
+<hr>
+<br>
+<a href="/">Go back !!</a>
+</div>
+{% endblock%}

@@ -1,0 +1,33 @@
+{%extends 'base.html'%} 
+
+{%block head%}
+
+{% endblock%} 
+
+
+{%block body%}
+<div class="container">
+{%if cipher != "":%}
+  <h1>Result </h1>
+  <p>The encrpytion of the text is given below :</p>
+  {% endif %}
+  <hr>
+{{cipher}}
+<br>
+<br>
+<hr>
+<h1>Result</h1>
+
+{% for file in files %}
+<hr>
+  
+<!-- <p>{{file}}</p> -->
+ 
+  <a class="btn btn-lg btn-success" href="/getPlotCSV/{{file}}" >Click here to download {{file}}.</a>
+{% endfor %}
+
+<hr>
+<br>
+<a href="/">Go back !!</a>
+</div>
+{% endblock%}
